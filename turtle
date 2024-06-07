@@ -1,0 +1,32 @@
+import turtle
+
+# Initialisation de la fenêtre turtle
+wn = turtle.Screen()
+wn.title("Hello in a Square")
+
+# Création d'une tortue
+pen = turtle.Turtle()
+
+# Positionner la tortue pour écrire "hello"
+pen.penup()
+pen.goto(-30, 0)
+pen.pendown()
+
+# Écrire "hello"
+pen.write("hello", align="center", font=("Arial", 24, "normal"))
+
+# Positionner la tortue pour dessiner le carré
+pen.penup()
+pen.goto(-50, 20)
+pen.pendown()
+
+# Dessiner le carré autour de "hello"
+for _ in range(4):
+    pen.forward(100)
+    pen.right(90)
+
+# Cacher la tortue
+pen.hideturtle()
+
+# Garder la fenêtre ouverte
+turtle.done()
